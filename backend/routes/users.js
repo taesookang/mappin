@@ -30,8 +30,8 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     // find user
-    const user = await User.findOne({ username: req.body.username });
-    !user && res.status(400).json("Incorrect username or password.");
+    const user = await User.findOne({ email: req.body.email });
+    !user && res.status(400).json("Incorrect email or password.");
 
     // validate password
     const validPassword = await bcrypt.compare(
@@ -41,8 +41,8 @@ router.post("/login", async (req, res) => {
     !validPassword && res.status(400).json("Incorrect username or password.");
 
     // send req
-    res.status(200).json({ _id: user._id, username: user.username })
-  } catch (error) {
+    res.status(200).json({ _id: user._id, username: user.username, email: user.email })
+  } catch (err) {
       res.status(500).json(err)
   }
 });
