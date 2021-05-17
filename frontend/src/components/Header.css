@@ -1,0 +1,25 @@
+.btn {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.logout {
+    background-color: tomato;
+}
+.login {
+    background-color: salmon;
+}
+.register {
+    background-color: slateblue;
+}
+
+.btns, .logout {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
