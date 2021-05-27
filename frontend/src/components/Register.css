@@ -19,11 +19,16 @@
 }
 
 .logo {
-    color: salmon;
+    color: var(--primary);
     display: flex;
     align-items: center;
     font-weight: 700;
 }
+
+.regForm {
+    margin-top: 20px;
+} 
+
 .regInput {
     display: flex;
     flex-direction: column;
@@ -31,7 +36,7 @@
 }
 
 .regInput input {
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .regBtn {
@@ -39,20 +44,20 @@
     padding: 5px;
     border-radius: 5px;
     color: white;
-    background-color: salmon;
+    background-color: var(--primary);
     font-weight: 500;
     cursor: pointer;
 }
 
 .success {
     font-size: 12px;
-    color: green;
+    color: #008000;
     text-align: center;
 }
 
 .failure {
     font-size: 12px;
-    color: tomato;
+    color: var(--danger);
     text-align: center;
 }
 
@@ -61,11 +66,11 @@
     top: 5px;
     right: 5px;
     cursor: pointer;
-    color: lightgray;
+    color: #d3d3d3;
 }
 
 .goToLogin {
-    color: tomato;
+    color: var(--primary);
     display: flex;
     align-items: center;
     justify-content: flex-end;

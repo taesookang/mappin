@@ -50,7 +50,10 @@ export default function Pins({
             <Room
               style={{
                 fontSize: viewport.zoom * 7,
-                color: p.username === currentUser ? "salmon" : "slateblue",
+                color:
+                  currentUser !== null && p.username === currentUser
+                    ? "#ff6e40"
+                    : "#0277bd",
                 cursor: "pointer",
               }}
               onClick={() => handleMarkerClick(p._id, p.lat, p.long)}
@@ -68,19 +71,26 @@ export default function Pins({
               onClose={() => setCurrentPlaceId(null)}
             >
               <div className="card">
-                <label>Place</label>
-                <h4 className="place">{p.title}</h4>
-                <label>Review</label>
-                <p className="desc">{p.desc}</p>
-                <label>Rating</label>
-                <div className="stars">
-                  {Array(parseInt(p.rating)).fill(<Star className="star" />)}
+                <div>
+                  <label>Place</label>
+                  <h4 className="place">{p.title}</h4>
                 </div>
-                <label>Information</label>
-                <span className="username">
-                  Created by <b>{p.username}</b>
-                </span>
-                <span className="date">{format(p.createdAt)}</span>
+                <div>
+                  <label>Review</label>
+                  <p className="desc">{p.desc}</p>
+                </div>
+                <div>
+                  <label>Rating</label>
+                  <div className="stars">
+                    {Array(parseInt(p.rating)).fill(<Star className="star" />)}
+                  </div>
+                </div>
+                <div className="username">
+                  <span>
+                    Created by <b>{p.username ? p.username : "Unknown"}</b>
+                  </span>
+                  <span className="date">{format(p.createdAt)}</span>
+                </div>
               </div>
             </Popup>
           )}

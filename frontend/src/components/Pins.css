@@ -1,31 +1,38 @@
 .card {
-    width: 250px;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8px 12px;
+  border-radius: 5px;
 }
 
-
 label {
-    color: tomato;
-    font-size: 13px;
-    margin: 3px 0;
+  color: var(--primary);
+  font-size: 13px;
+  margin: 3px 0;
 }
 
 .desc {
-    font-size: 14px;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .star {
-    color: gold
+  color: #ffd700;
 }
 
 .username {
-    font-size: 14px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .date {
-    font-size: 12px;
-    color: gray;
+  font-size: 12px;
+  color: #a3a3a3;
 }

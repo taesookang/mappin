@@ -9,13 +9,13 @@
 }
 
 .logout {
-    background-color: tomato;
+    background-color: var(--danger);
 }
 .login {
-    background-color: salmon;
+    background-color: var(--primary);
 }
 .register {
-    background-color: slateblue;
+    background-color: var(--secondary);
 }
 
 .btns, .logout {

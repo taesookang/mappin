@@ -44,9 +44,10 @@ export default function AddPin({
         onClose={() => setNewPlace(null)}
       >
         <div>
-          <form onSubmit={handleSubmit}>
+          <form className="addPinForm" onSubmit={handleSubmit}>
             <label>Title</label>
             <input
+              className="titleInput"
               type="text"
               placeholder="Enter a title."
               onChange={(e) => setTitle(e.target.value)}

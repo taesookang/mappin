@@ -39,7 +39,7 @@ export default function Login({
         <PersonPinCircle />
         Mappin
       </div>
-      <form onSubmit={handleSubmit}>
+      <form className="loginForm" onSubmit={handleSubmit}>
         <div className="loginInput">
           <input type="email" placeholder="Email" autoComplete="email" ref={emailRef} />
           <input type="password" placeholder="Password" autoComplete="current-password" ref={passwordRef} />

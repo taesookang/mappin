@@ -33,7 +33,7 @@ export default function Register({ setShowRegister, setShowLogin }) {
         <PersonPinCircle />
         Mappin
       </div>
-      <form onSubmit={handleSubmit}>
+      <form className="regForm" onSubmit={handleSubmit}>
         <div className="regInput">
           <input type="text" placeholder="Username" autoComplete="off" ref={nameRef} />
           <input type="email" placeholder="Email" autoComplete="off" ref={emailRef} />
